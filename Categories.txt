@@ -1,0 +1,91 @@
+Categories are:
+
+Sensors
+Interfaces
+Software
+Calibration 
+Accessories
+Expedited Processing
+Shipping
+Payment method
+
+Sensors:
+  Load Cells
+  Weight Scales
+  Impact Force Sensors
+  Torque Sensors
+   Displacement Sensors
+   Pressure Sensors
+   Level Sensors
+   Impact Force Sensors
+
+
+Sensors:
+  Load Cells
+
+Interfaces:
+  Analog Interfaces
+  Digital Interfaces
+
+Analog Interfaces:
+AI-1000
+AI-1000-CV
+
+Digital Interfaces:
+DI-100U
+DI-100UHS
+DI-1000U
+DI-1000UHS
+DI-1000UHS-1K
+DI-1000UHS-10K
+DI-1000U-5V
+DI-1000UHS-5V
+Software:
+ Loadvue Lite
+ LoadVUEe Pro
+ SensorVUE 
+ ControlVUE
+ nCounter
+
+Calibration:
+Under 10K lbs
+Over 10K lbs
+
+Under 10k lbs:
+Compression Only (dcal*c01)
+Tension Only (dcal*c02)
+Universal Only (dcal*c03)
+
+Over 10k lbs:
+Compression Only (dcal-hc*c01)
+Tension Only (dcal-hc*c02)
+Universal Only (dcal-hc *c03)
+
+Expedited Processing Options (best effort basis):
+Exp01 : Process and ship within 3 Business Days
+Exp02: Process and ship within 1 Business Day 
+Exp03| Process and ship within same Business Day
+
+Shipping Options:
+
+Use own account
+Prepay and Add
+
+Prepay & Add:
+Domestic
+International Economy
+
+Domestic:
+Standard Overnight 
+2 Day
+3 Day
+Ground
+
+International Economy:
+Canada
+Mexico
+Western Europe
+Eastern Europe
+Asia
+Africa
+Australia/New Zealand

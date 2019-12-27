@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="LoadVUEMain.js"></script>
+  <title>LoadVUE Shopping Cart</title>
+</head>
+
+<body>
+
+    <div class="container">
+      <h1 class="title is-1">
+        LoadVUE Shopping Cart
+      </h1>
+    </div>
+    <br> </br>
+
+    <div class="container is-fluid">
+    <div class="columns">
+      <div id="col1" class="column">
+        <button class="button">
+          <span>Sensors</span>
+        </button>
+         <br> </br>
+        <div class="tile is-vertical">
+          Load Cells
+          <input id="loadcells" class="input is-small" type="Quantity" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="loadcellssval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+        </input>
+        </div>
+         <br>
+        <div class="tile is-vertical">
+          Weight Scales
+           <input id="weightscale"  class="input is-small" type="Quantity" placeholder="Quantity">
+           <div class="control">
+             <div class="select">
+               <select id="weightscaleval">
+                 <option> Select Quantity </option>
+                 <option value="10">10</option>
+                 <option value="50">50</option>
+                 <option value="100">100</option>
+                 <option value="500">500</option>
+                 <option value="1000">1000</option>
+               </select>
+             </div>
+           </div>
+          </input>
+        </div>
+         <br>
+        <div class="tile is-vertical">
+          Impact Force Sensors
+          <input id="impactsensors"  class="input is-small" type="Quantity" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="impactsensorsval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+         <br>
+        <div class="tile is-vertical">
+          Torque Sensors
+          <input id="torquesensors"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="torquesensorsval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          Displacement Sensors
+          <input id="displacementsensors"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="displacementsensorsval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          Pressure Sensors
+          <input id="pressuresensors"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="pressuresensorsval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          Level Sensors
+          <input id="levelsensors"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="levelsensorsval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+      </div>
+
+      <div id="col2" class="column">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Interfaces</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <div id="analoginter" class="dropdown-item">
+                Analog Interfaces
+              </div>
+               <hr class="dropdown-divider">
+              <div id="digitalinter" class="dropdown-item">
+                Digital Interfaces
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br> </br>
+        <div id="analoginterfaces">
+          <div class="tile is-vertical">
+            AI-1000
+            <input id="AI-1000"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="AI-1000val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+          <br>
+
+          <div class="tile is-vertical">
+            AI-1000-CV
+            <input id="AI-1000-CV"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="AI-1000-CVval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+        </div>
+
+
+        <div id="digitalinterfaces">
+          <div class="tile is-vertical">
+            DI-100U
+            <input id="DI-100U"  class="input is-small" type="text" placeholder="Enter Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-100Uval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+              <br>
+
+          <div class="tile is-vertical">
+            DI-100UHS
+            <input id="DI-100UHS"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-100UHSval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+              <br>
+
+          <div class="tile is-vertical">
+            DI-1000U
+            <input id="DI-1000U"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000Uval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+              <br>
+
+          <div class="tile is-vertical">
+           DI-1000UHS
+            <input id="DI-1000UHS"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000UHSval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+              <br>
+
+          <div class="tile is-vertical">
+           DI-1000UHS-1K
+            <input id="DI-1000UHS-1K"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000UHS-1Kval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+              <br>
+
+          <div class="tile is-vertical">
+           DI-1000UHS-10K
+            <input id="DI-1000UHS-10K"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000UHS-10Kval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+            <br>
+
+          <div class="tile is-vertical">
+           DI-1000U-5V
+            <input id="DI-1000U-5V"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000U-5Vval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+          <br>
+
+          <div class="tile is-vertical">
+           DI-1000UHS-5V
+            <input id="DI-1000UHS-5V"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="DI-1000UHS-5Vval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="col3" class="column">
+        <button class="button">
+          <span>Software</span>
+        </button>
+        <br> </br>
+        <div class="tile is-vertical">
+          LoadVUE Lite
+          <input id="loadvuelite"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="loadvueliteval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+         <br>
+        <div class="tile is-vertical">
+          LoadVUE Pro
+          <input id="loadvuepro"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="loadvueproval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          SensorVUE
+          <input id="sensorvue"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="sensorvueval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          ControlVUE
+          <input id="controlvue"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="controlvueval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+          <br>
+        <div class="tile is-vertical">
+          nCounter
+          <input id="ncounter"  class="input is-small" type="text" placeholder="Quantity">
+          <div class="control">
+            <div class="select">
+              <select id="ncounterval">
+                <option> Select Quantity </option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+            </div>
+          </div>
+         </input>
+        </div>
+      </div>
+
+      <div id="col4" class="column">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Calibration</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <div id="under10k" class="dropdown-item">
+                Under 10k lbs
+              </div>
+               <hr class="dropdown-divider">
+              <div id="over10k" class="dropdown-item">
+                Over 10k lbs
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="under10klbs">
+          <div class="tile is-vertical">
+            Compression Only (dcal*c01)
+            <input id="dcal*c01"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal*c01val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+          <br>
+
+          <div class="tile is-vertical">
+            Tension Only (dcal*c02)
+            <input id="dcal*c02"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal*c02val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+          <br>
+
+          <div class="tile is-vertical">
+            Universal Only (dcal*c03)
+            <input id="dcal*c03"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal*c03val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+        </div>
+
+
+        <div id="over10klbs">
+          <div class="tile is-vertical">
+            Compression Only (dcal-hc*c01)
+            <input id="dcal-hc*c01"  class="input is-small" type="text" placeholder="Enter Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal-hc*c01val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+          <br>
+
+          <div class="tile is-vertical">
+            Tension Only (dcal-hc*c02)
+            <input id="dcal-hc*c02"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal-hc*c02val">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+
+          <br>
+
+          <div class="tile is-vertical">
+            Universal Only (dcal-hc*c03)
+            <input id="dcal-hc*c03"  class="input is-small" type="text" placeholder="Quantity">
+            <div class="control">
+              <div class="select">
+                <select id="dcal-hc*c03Uval">
+                  <option> Select Quantity </option>
+                  <option value="10">10</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+            </div>
+          </input>
+          </div>
+        </div>
+      </div>
+
+      <div id="col5" class="column">
+        <button class="button">
+          <span>Accessories</span>
+        </button>
+      </div>
+
+      <div id="col6" class="column">
+        <button class="button">
+          <span>Order</span>
+        </button>
+        <div id="order" class="tile"> </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script>
+//switches between non hidden and hidden divs
+function switchAppearance(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</html>
